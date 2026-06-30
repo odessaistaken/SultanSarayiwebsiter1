@@ -29,10 +29,10 @@ export default function ScrollReveal({
       initial="hidden"
       animate={controls}
       variants={{
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 40 },
         visible: { opacity: 1, y: 0 },
       }}
-      transition={{ duration: 0.7, delay, ease: [0.4, 0, 0.2, 1] }}
+      transition={{ duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] }}
       className={className}
     >
       {children}

@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import bungalovs from '../assets/sapanca_resim5.png';
+import kaynarcahero from '../assets/kaynarcaheror2.png';
 
 const SAPANCA_BG =
   bungalovs;
 const KAYNARCA_BG =
-  'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1600';
+  kaynarcahero;
 
 type Side = 'sapanca' | 'kaynarca' | null;
 
@@ -35,7 +36,7 @@ export default function Home() {
         <motion.section
           className="relative h-full overflow-hidden cursor-pointer"
           animate={{ width: getWidth('sapanca') }}
-          transition={{ duration: 0.65, ease: [0.4, 0, 0.2, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           onHoverStart={() => setHovered('sapanca')}
           onHoverEnd={() => setHovered(null)}
         >
@@ -86,7 +87,7 @@ export default function Home() {
         <motion.section
           className="relative h-full overflow-hidden cursor-pointer"
           animate={{ width: getWidth('kaynarca') }}
-          transition={{ duration: 0.65, ease: [0.4, 0, 0.2, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           onHoverStart={() => setHovered('kaynarca')}
           onHoverEnd={() => setHovered(null)}
         >
@@ -191,7 +192,12 @@ export default function Home() {
 
       {/* ── Absolute Center Overlay ── */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
-        <div className="flex flex-col items-center select-none">
+        <motion.div
+          className="flex flex-col items-center select-none"
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        >
           <div className="hidden md:block w-px h-20 bg-gradient-to-b from-transparent to-white/40 mb-1" />
           <div className="bg-black/30 backdrop-blur-sm border border-white/20 px-8 py-5 text-center shadow-2xl">
             <div className="flex items-center justify-center gap-3 mb-2">
@@ -209,7 +215,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hidden md:block w-px h-20 bg-gradient-to-b from-white/40 to-transparent mt-1" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -18,6 +18,8 @@ import manzara from '../assets/sapanca_resim2.png';
 import bungresim from '../assets/sapanca_resim3.png';
 import yatakresim from '../assets/sapanca_resim4.png';
 import bungalovs from '../assets/sapanca_resim5.png';
+import bahce from '../assets/bahceresim.png';
+import manzara2 from '../assets/sapancakemanzara.png';
 
 const bunglowFeatures = [
   {
@@ -53,6 +55,8 @@ const bunglowFeatures = [
 ];
 
 const galleryImages = [
+  manzara2,
+  bahce,
   villaImg,
   bungresim,
   yatakresim,
@@ -79,21 +83,33 @@ export default function SapancaPage() {
 
         <div className="relative h-full flex flex-col items-center justify-center px-5 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+            }}
             className="w-full max-w-2xl"
           >
-            <span className="text-amber-400 uppercase tracking-[0.3em] text-[10px] sm:text-xs font-sans font-semibold">
+            <motion.span
+              variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }}
+              className="block text-amber-400 uppercase tracking-[0.3em] text-[10px] sm:text-xs font-sans font-semibold mb-3"
+            >
               Lüks Bungalov Kaçamağı
-            </span>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold text-white font-serif my-3 md:my-4 leading-tight">
+            </motion.span>
+            <motion.h1
+              variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }}
+              className="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold text-white font-serif my-3 md:my-4 leading-tight"
+            >
               Sultan Sarayı Sapanca
-            </h1>
-            <p className="text-white/80 text-sm sm:text-lg md:text-xl font-light font-sans max-w-xl mx-auto mb-8 leading-relaxed px-2">
+            </motion.h1>
+            <motion.p
+              variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }}
+              className="text-white/80 text-sm sm:text-lg md:text-xl font-light font-sans max-w-xl mx-auto mb-8 leading-relaxed px-2"
+            >
               Doğanın kalbinde, Sapanca Gölü'nün kenarında lüks bungalolarımızda
               unutulmaz anılar yaratın.
-            </p>
+            </motion.p>
           </motion.div>
 
           {/* Scroll indicator */}
@@ -172,7 +188,7 @@ export default function SapancaPage() {
             Sapanca Gölü Kenarı, Sapanca / Sakarya, Türkiye
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-8 text-white/40 text-xs font-sans mb-6">
-            <span>+90 (264) 555 0000</span>
+            <span>+90 (533) 264 54 83</span>
             <span className="hidden sm:inline">·</span>
             <span>info@sultansarayisapanca.com</span>
           </div>

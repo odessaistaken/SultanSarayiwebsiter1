@@ -13,8 +13,15 @@ import ScrollReveal from '../components/ScrollReveal';
 import FeatureGrid from '../components/FeatureGrid';
 import Gallery from '../components/Gallery';
 import BookingForm from '../components/BookingForm';
+import kaynarcahero from '../assets/kaynarcaheror2.png';
+import galeri1 from '../assets/kaynarca_resim1.png';
+import galeri2 from '../assets/kaynarca_resim2.png';
+import galeri3 from '../assets/kaynarca_resim3.png';
+import galeri4 from '../assets/kaynarca_resim6.png';
+import galeri5 from '../assets/kaynarca_resim7ps.png';
 
-const HERO_BG = '';
+
+const HERO_BG = kaynarcahero;
 
 const eventServices = [
   {
@@ -39,8 +46,8 @@ const eventServices = [
   },
   {
     icon: <ChefHat className="w-6 h-6" />,
-    title: 'Gourmet Katering',
-    description: 'Şef rehberliğinde lezzetli yemekler ve sunum.',
+    title: 'Yemek Hizmeti',
+    description: '.',
   },
   {
     icon: <Sparkles className="w-6 h-6" />,
@@ -50,11 +57,12 @@ const eventServices = [
 ];
 
 const galleryImages = [
-  'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/1144099/pexels-photo-1144099.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/1144098/pexels-photo-1144098.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  galeri3,
+  galeri2,
+  galeri1,
+  galeri4,
+  galeri5,
+
 ];
 
 export default function KaynarcarPage() {
@@ -78,21 +86,33 @@ export default function KaynarcarPage() {
 
         <div className="relative h-full flex flex-col items-center justify-center px-5 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+            }}
             className="w-full max-w-2xl"
           >
-            <span className="text-rose-300 uppercase tracking-[0.3em] text-[10px] sm:text-xs font-sans font-semibold">
+            <motion.span
+              variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }}
+              className="block text-rose-300 uppercase tracking-[0.3em] text-[10px] sm:text-xs font-sans font-semibold mb-3"
+            >
               Prestij ve Zarafet
-            </span>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold text-white font-serif my-3 md:my-4 leading-tight">
+            </motion.span>
+            <motion.h1
+              variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }}
+              className="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold text-white font-serif my-3 md:my-4 leading-tight"
+            >
               Sultan Sarayı Kaynarca
-            </h1>
-            <p className="text-white/80 text-sm sm:text-lg md:text-xl font-light font-sans max-w-xl mx-auto mb-8 leading-relaxed px-2">
+            </motion.h1>
+            <motion.p
+              variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }}
+              className="text-white/80 text-sm sm:text-lg md:text-xl font-light font-sans max-w-xl mx-auto mb-8 leading-relaxed px-2"
+            >
               Hayalinizdeki etkinliği gerçekleştirmek için mükemmel mekan. Düğünler,
               kına geceleri ve kurumsal etkinlikler için hazırız.
-            </p>
+            </motion.p>
           </motion.div>
 
           {/* Scroll indicator */}
@@ -204,12 +224,12 @@ export default function KaynarcarPage() {
             Kaynarca Sahil Yolu, Kaynarca / Sakarya, Türkiye
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-8 text-white/40 text-xs font-sans mb-6">
-            <span>+90 (264) 555 0001</span>
+            <span>+90 (533) 134 17 98</span>
             <span className="hidden sm:inline">·</span>
             <span>events@sultansarayikaynarca.com</span>
           </div>
           <p className="text-white/30 text-xs font-sans">
-            © 2024 Sultan Sarayı. Tüm hakları saklıdır.
+            © 2026 Sultan Sarayı. Tüm hakları saklıdır.
           </p>
         </div>
       </footer>

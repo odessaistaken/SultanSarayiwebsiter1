@@ -285,7 +285,8 @@ export default function BookingForm({
             {/* Submit — whileTap only (no whileHover, safe for touch) */}
             <motion.button
               type="submit"
-              className={`w-full ${buttonClasses[accentColor]} text-white font-semibold py-4 rounded-lg transition-colors duration-200 uppercase tracking-wide text-sm font-sans cursor-pointer border-none`}
+              className={`w-full ${buttonClasses[accentColor]} text-white font-semibold py-4 rounded-lg transition-all duration-300 uppercase tracking-wide text-sm font-sans cursor-pointer border-none shadow-lg hover:shadow-xl`}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
             >
               {submitted ? '✓ Gönderildi!' : 'Bize Ulaşın'}

@@ -82,8 +82,9 @@ export default function FeatureGrid({
             <motion.div
               key={index}
               variants={itemVariants}
+              whileHover={{ y: -8, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }}
             >
-              <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 active:border-white/20 rounded-lg p-6 sm:p-8 transition-colors duration-300 h-full">
+              <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 active:border-white/20 hover:border-white/20 hover:shadow-2xl hover:shadow-black/50 rounded-lg p-6 sm:p-8 transition-all duration-500 h-full">
                 {/* Icon — no hover:scale on mobile (touch UX) */}
                 <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-5 sm:mb-6 ${iconClasses[accentColor]}`}>
                   {feature.icon}
