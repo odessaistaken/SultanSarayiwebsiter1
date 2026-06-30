@@ -13,13 +13,13 @@ import ScrollReveal from '../components/ScrollReveal';
 import FeatureGrid from '../components/FeatureGrid';
 import Gallery from '../components/Gallery';
 import BookingForm from '../components/BookingForm';
-import villaImg from '../assets/sapanca_resim1.png';
-import manzara from '../assets/sapanca_resim2.png';
-import bungresim from '../assets/sapanca_resim3.png';
-import yatakresim from '../assets/sapanca_resim4.png';
-import bungalovs from '../assets/sapanca_resim5.png';
-import bahce from '../assets/bahceresim.png';
-import manzara2 from '../assets/sapancakemanzara.png';
+import villaImg from '../assets/sapanca_resim1.jpeg';
+import manzara from '../assets/sapanca_resim2.jpeg';
+import bungresim from '../assets/sapanca_resim3.jpeg';
+import yatakresim from '../assets/sapanca_resim4.jpeg';
+import bungalovs from '../assets/sapanca_resim5.jpeg';
+import bahce from '../assets/bahceresim.jpeg';
+import manzara2 from '../assets/sapancakemanzara.jpeg';
 
 const bunglowFeatures = [
   {

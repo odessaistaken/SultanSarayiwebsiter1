@@ -13,12 +13,12 @@ import ScrollReveal from '../components/ScrollReveal';
 import FeatureGrid from '../components/FeatureGrid';
 import Gallery from '../components/Gallery';
 import BookingForm from '../components/BookingForm';
-import kaynarcahero from '../assets/kaynarcaheror2.png';
-import galeri1 from '../assets/kaynarca_resim1.png';
-import galeri2 from '../assets/kaynarca_resim2.png';
-import galeri3 from '../assets/kaynarca_resim3.png';
-import galeri4 from '../assets/kaynarca_resim6.png';
-import galeri5 from '../assets/kaynarca_resim7ps.png';
+import kaynarcahero from '../assets/kaynarcaheror2.jpeg';
+import galeri1 from '../assets/kaynarca_resim1.jpeg';
+import galeri2 from '../assets/kaynarca_resim2.jpeg';
+import galeri3 from '../assets/kaynarca_resim3.jpeg';
+import galeri4 from '../assets/kaynarca_resim6.jpeg';
+import galeri5 from '../assets/kaynarca_resim7ps.jpeg';
 
 
 const HERO_BG = kaynarcahero;

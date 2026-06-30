@@ -2,8 +2,8 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import bungalovs from '../assets/sapanca_resim5.png';
-import kaynarcahero from '../assets/kaynarcaheror2.png';
+import bungalovs from '../assets/sapanca_resim5.jpeg';
+import kaynarcahero from '../assets/kaynarcaheror2.jpeg';
 
 const SAPANCA_BG =
   bungalovs;
