@@ -31,4 +31,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          cname: www.sultansarayı.com
+          cname: www.xn--sultansaray-9zb.com  # www.sultansarayı.com (punycode)
